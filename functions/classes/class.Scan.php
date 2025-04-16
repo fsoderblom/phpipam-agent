@@ -446,6 +446,7 @@ class Scan extends Common_functions {
 	    exec($cmd, $output, $retval);
 
 	    # save result
+	    $out = null;
 	    if(sizeof($output)>0) {
 	    	foreach($output as $line) {
 if (!preg_match('/timed out/', $line)) {
