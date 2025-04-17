@@ -1025,7 +1025,7 @@ class phpipamAgent extends Common_functions {
 		}
 		// loop
 		foreach($subnets as $s) {
-			if(is_array($s->discovered)) {
+			if (isset($s->discovered) && is_array($s->discovered)) {
 				foreach($s->discovered as $ip) {
 					// try to resolve hostname
 					$tmp = new stdClass();
